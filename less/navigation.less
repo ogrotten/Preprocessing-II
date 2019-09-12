@@ -1,1 +1,25 @@
 // Navigation Styles here
+
+nav {
+    width: 45%;
+    font-size: 1.6rem;
+    .flexrow();
+    justify-content: space-around;
+    a {
+        color: @shark;
+        text-decoration: none;
+        font-weight: bold;
+        @media (max-width: 500px) {
+            padding: 12px;
+            margin: 0;
+            border-bottom: 3px dashed @navigation-border;
+            text-align: center
+        }
+    }
+    @media (max-width: 500px) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+}
