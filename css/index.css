@@ -134,17 +134,22 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
 }
 h1 {
   font-size: 4rem;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3.2rem;
+  }
 }
 h2 {
   font-size: 3.2rem;
@@ -184,15 +189,14 @@ nav a {
   nav a {
     padding: 12px;
     margin: 0;
-    border-bottom: 3px dashed #C0C0C0;
     text-align: center;
   }
 }
 @media (max-width: 500px) {
   nav {
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: 100%;
     padding: 0;
+    justify-content: space-evenly;
   }
 }
 .footer {
@@ -205,6 +209,27 @@ nav a {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+header {
+  width: 100%;
+  border-bottom: 2px dashed #C0C0C0;
+}
+header div.headerInner {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+@media (max-width: 500px) {
+  header div.headerInner {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
 }
 .home .intro {
   padding: 0 0 15px;
@@ -229,6 +254,13 @@ nav a {
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -270,16 +302,8 @@ nav a {
   background-color: #17A2B8;
   color: #FFFFFF;
 }
-header {
-  width: 100%;
-  border-bottom: 2px dashed #C0C0C0;
-}
-header div.headerInner {
-  width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 0;
+@media (max-width: 500px) {
+  .home {
+    width: 90%;
+  }
 }
