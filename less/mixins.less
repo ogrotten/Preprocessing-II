@@ -1,1 +1,35 @@
 // Mixins in here
+
+.flexcol() {
+	display: flex;
+	flex-direction: column;
+}
+
+.flexrow() {
+	display: flex;
+	flex-direction: row;
+}
+
+.dashline() {
+    border-bottom: 2px dashed @navigation-border;
+}
+
+.testblock() {
+    border: 1px solid red;
+}
+
+.singupbutt() {
+    text-align: center;
+    width: 83%;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 12px;
+    border-radius: 13px;
+    border: 1px solid @navigation-border;
+    background-color: @button-bg;
+    color: @main-bg;
+    @media @mobile {
+        width: 100%;
+        align-items: center;
+    }
+}
